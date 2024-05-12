@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let res of Resturant; let i = index">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a [routerLink]="['/restaurant', res.id]" class="text-decoration-none text-dark">{{ res.name }}</a>
+              </h5>
+              <h5 class="card-title">
+                <a [routerLink]="['/restaurant', res.id]" class="text-decoration-none text-secondary">{{ res.location }}</a>
+              </h5>
+              <button class="btn btn-danger btn-sm float-end" (click)="res.id&&deleteRestaurant(res.id)">
+                <i class="bi bi-trash"></i> Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mt-3">
+  <button class="btn btn-primary" (click)="Add()">Add Restaurant</button>
+</div>

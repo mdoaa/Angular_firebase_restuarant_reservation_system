@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+            <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Restaurant Name</label>
+                    <input type="text" id="name" ngModel name="name" required class="form-control">
+                </div>
+
+                <!-- Adding Time Slots -->
+                <div class="mb-3" *ngFor="let slot of timeSlots; let i = index">
+                    <label for="time{{i}}" class="form-label">Time Slot {{i+1}}</label>
+                    <div class="input-group">
+                        <input type="time" id="time{{i}}" class="form-control" [(ngModel)]="timeSlots[i].time" name="time{{i}}" required>
+                        <input type="number" class="form-control" [(ngModel)]="timeSlots[i].seats" name="seats{{i}}" placeholder="Seats" required>
+                        <button type="button" class="btn btn-danger" (click)="removeSlot(i)">Remove</button>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-secondary" (click)="addSlot()">Add Time Slot</button>
+
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" id="location" class="form-control" ngModel name="location" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel" id="phone" class="form-control" ngModel name="phone" required />
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-success btn-hover" [disabled]="!form.valid">Add Restaurant</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

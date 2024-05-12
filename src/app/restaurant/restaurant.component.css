@@ -1,0 +1,85 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif; /* Best font */
+    font-size: 25px; /* Base font size */
+    color: #343a40; /* Text color */
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #007bff;
+    font-size: 24px; /* Larger font size for titles */
+}
+
+.accent-line {
+    background-color: #007bff;
+    height: 2px;
+    border: none;
+}
+
+.form-label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px; /* Increase label font size */
+}
+
+.card-text {
+    color: #6c757d;
+    font-size: 20px; /* Increase text font size */
+}
+
+.restaurant-name {
+    font-size: 20px; /* Larger font size for restaurant name */
+}
+
+.time-slot {
+    font-size: 18px; /* Larger font size for time slots */
+}
+
+/* Custom styles for the spans */
+.action {
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Show pointer cursor on hover */
+    margin: 0 10px; /* Add some margin between buttons */
+    padding: 5px 10px; /* Add padding to buttons */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Add border radius to buttons */
+}
+
+/* Style for the minus button */
+.minus {
+    color: #ff0000; /* Red color for minus */
+    background-color: transparent; /* Transparent background */
+}
+
+/* Style for the plus button */
+.plus {
+    color: #00ff00; /* Green color for plus */
+    background-color: transparent; /* Transparent background */
+}
+
+/* Style for the save button */
+.save {
+    color: #0000ff; /* Blue color for save */
+    background-color: transparent; /* Transparent background */
+}
+
+/* Hover effect for buttons */
+.action:hover {
+    background-color: #e9ecef; /* Light gray background on hover */
+}
+
+.update-button {
+    font-size: 18px; /* Larger font size for buttons */
+}
+.available-seats {
+    font-weight: bold; /* Make the text bold */
+    color: #28a745; /* Green color for available seats */
+    font-size: 18px; /* Increase font size */
+}

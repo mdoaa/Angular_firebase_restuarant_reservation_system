@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "first-3ccc0": {
+      "hosting": {
+        "my-app": [
+          "first-3ccc0"
+        ]
+      }
+    },
+    "sw2proj-a8013": {
+      "hosting": {
+        "my-app": [
+          "sw2proj-a8013"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sw2proj-a8013"
+  }
+}

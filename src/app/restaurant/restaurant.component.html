@@ -1,0 +1,44 @@
+<div class="container mt-5">
+    <!-- Restaurant Details Card -->
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Restaurant Details</h2>
+                    <hr class="accent-line">
+                    <div class="mb-3">
+                        <label class="form-label text-primary"> Name :  <span class="card-text restaurant-name">{{ res.name }} </span> </label>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-primary">Location :  <span class="card-text restaurant-name">{{ res.location }} </span> </label>
+                    </div>
+
+   <!-- Display Time Slots -->
+<div *ngIf="res.timeSlots && res.timeSlots.length > 0">
+    <div *ngFor="let slot of res.timeSlots; let i = index">
+        <div class="mb-3 time-slot">
+            <label class="form-label">Time Slot: {{ slot.time }}</label>
+            <p class="card-text">Available Seats: <span class="available-seats">{{ slot.seats }}</span></p>
+            <div class="text-center">
+                <button class="action minus" (click)="incSeats(i, slot.time)" [hidden]="seatsnum[i]==0 || saved[i]==1">&#8722;</button>
+                <span class="mx-3">{{ tempSeats[i][slot.time] }}</span>
+                <button class="action plus" (click)="decreaseSeats(i, slot.time)">&#43;</button>
+                <button class="action save" (click)="saveSeats(i)">&#10003;</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                    <!-- Buttons -->
+                    <div class="text-center">
+                        <!-- Button to navigate to update component -->
+                        <button class="btn btn-primary update-button" (click)="navigateToUpdate()">
+                            <i class="fas fa-edit"></i> Update Restaurant
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

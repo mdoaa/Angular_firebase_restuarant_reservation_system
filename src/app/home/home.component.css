@@ -1,0 +1,59 @@
+.container {
+    margin-top: 50px;
+  }
+  
+  .restaurant-card {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .restaurant-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .delete-button {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+  
+  .restaurant-card:hover .delete-button {
+    opacity: 1;
+  }
+  
+  .add-button {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .add-button:hover {
+    background-color: #28a745; /* Green */
+    border-color: #28a745;
+  }
+  
+
+  
+  
+  .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
+  
